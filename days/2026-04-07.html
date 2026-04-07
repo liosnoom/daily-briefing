@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026-04-07 브리핑</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121933;
+      --muted: #9fb0d0;
+      --text: #ecf2ff;
+      --accent: #7c9cff;
+      --accent2: #56d4c8;
+      --line: rgba(255,255,255,.08);
+      --chip: rgba(124,156,255,.14);
+      --warn: #ffd166;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #0b1020 0%, #0d1328 100%);
+      color: var(--text);
+      font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    }
+    .wrap {
+      width: min(980px, calc(100% - 24px));
+      margin: 0 auto;
+      padding: 20px 0 48px;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(124,156,255,.2), rgba(86,212,200,.12));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 12px 36px rgba(0,0,0,.25);
+    }
+    h1, h2, h3 { margin: 0; }
+    h1 { font-size: 26px; margin-bottom: 8px; }
+    .sub { color: var(--muted); font-size: 14px; }
+    .summary {
+      margin-top: 14px;
+      padding: 14px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    .summary ul { margin: 8px 0 0 18px; padding: 0; }
+    .section {
+      margin-top: 18px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .section-head h2 { font-size: 18px; }
+    .section-head p { margin: 6px 0 0; color: var(--muted); }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 14px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .num {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--chip);
+      color: #cdd8ff;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .row {
+      margin: 8px 0;
+    }
+    .label {
+      display: inline-block;
+      min-width: 88px;
+      color: var(--accent2);
+      font-weight: 600;
+    }
+    .muted { color: var(--muted); }
+    a {
+      color: #b8c8ff;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    a:hover { text-decoration: underline; }
+    .playlist-item {
+      padding: 12px 0;
+      border-top: 1px dashed rgba(255,255,255,.08);
+    }
+    .playlist-item:first-child { border-top: 0; padding-top: 0; }
+    details {
+      margin-top: 12px;
+      border-top: 1px dashed rgba(255,255,255,.08);
+      padding-top: 12px;
+    }
+    summary {
+      cursor: pointer;
+      color: var(--warn);
+      font-weight: 600;
+    }
+    blockquote {
+      margin: 12px 0 0;
+      padding: 0 0 0 14px;
+      border-left: 3px solid rgba(124,156,255,.4);
+      color: #d9e3ff;
+      white-space: pre-wrap;
+    }
+    .footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>2026-04-07 브리핑</h1>
+      <div class="sub">주제별 정리 + 원문 바로가기 + 메모 전문 보존</div>
+      <div class="summary">
+        <h3>오늘 핵심 요약</h3>
+        <ul>
+          <li>오픈클로 운영 사례와 튜토리얼 자료가 많이 모였고, 역할별 에이전트 분리 운영이 핵심 패턴으로 보임.</li>
+          <li>AI 메모리/지식관리 쪽은 MEMORY.md, Obsidian Mind, LLM 위키처럼 누적·연결·갱신 구조가 공통 화두로 잡힘.</li>
+          <li>실무 자동화는 앱스스크립트·매크로·파워쿼리 재활용 흐름이 강하고, 로컬 AI·온디바이스 활용 사례도 함께 축적 중.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>오픈클로 세팅부터 활용까지</h2>
+        <p>일반 분류 항목이 아니라, 순서대로 따라보는 참고용 영상 묶음</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="playlist-item"><div class="num">1</div><div class="title">오픈클로 클라우드 환경에서 설치</div><a href="https://youtu.be/LS1ub3_BEow?si=zoOL3Dr8t9oQJG4_" target="_blank">원문 바로가기</a></div>
+          <div class="playlist-item"><div class="num">2</div><div class="title">오픈클로 텔레그램 연동</div><a href="https://youtu.be/FWPQswZtjds?si=alKQOfXhzO4WZNuZ" target="_blank">원문 바로가기</a></div>
+          <div class="playlist-item"><div class="num">3</div><div class="title">오픈클로 슬랙 연동</div><a href="https://youtu.be/HnBoCQSpIys?si=685M0cRbsTkLi8iJ" target="_blank">원문 바로가기</a></div>
+          <div class="playlist-item"><div class="num">4</div><div class="title">오픈클로 디스코드 연동</div><a href="https://youtu.be/eiCIe_0Qf6o?si=QS5xXauGl00rABK_" target="_blank">원문 바로가기</a></div>
+          <div class="playlist-item"><div class="num">5</div><div class="title">오픈클로 매일 오전 공시 분석</div><a href="https://youtu.be/BkuCh87ebnA?si=4oGRUgrTqD4uj-4A" target="_blank">원문 바로가기</a></div>
+          <div class="playlist-item"><div class="num">6</div><div class="title">오픈클로 SaaS 개발부터 배포</div><a href="https://youtu.be/BkuCh87ebnA?si=4oGRUgrTqD4uj-4A" target="_blank">원문 바로가기</a><div class="muted">현재 5번과 동일 링크로 보임</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>1) 오픈클로 운영 사례</h2></div>
+      <div class="cards">
+        <article class="card">
+          <div class="num">1-1</div>
+          <div class="title">오픈클로 9개 에이전트를 돌리는 창업가 사례</div>
+          <div class="row"><span class="label">한줄 핵심</span>하나의 만능 에이전트보다 역할별로 여러 에이전트를 분리하는 운영 방식이 더 실전적이라는 사례.</div>
+          <div class="row"><span class="label">왜 중요한가</span>업무·가정·영업·콘텐츠 운영을 각각 분리해 컨텍스트 과부하를 줄이고, 실제 자동화 효과를 끌어올리는 운영 원리를 보여줌.</div>
+          <div class="row"><span class="label">원문</span><a href="https://eopla.net/magazines/41014" target="_blank">https://eopla.net/magazines/41014</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>2) AI 에이전트 운영 / 메모리 / 지식관리</h2></div>
+      <div class="cards">
+        <article class="card">
+          <div class="num">2-1</div>
+          <div class="title">Claude Code 기억력 관리 방법 비교</div>
+          <div class="row"><span class="label">한줄 핵심</span>Claude Code의 기억력 보강 방식으로 MEMORY.md와 Obsidian Mind를 비교한 글.</div>
+          <div class="row"><span class="label">왜 중요한가</span>개인용 메모리 구조와 팀 단위 외부 지식 시스템 중 어떤 구성이 더 맞는지 판단하는 기준이 됨.</div>
+          <div class="row"><span class="label">원문</span><a href="https://x.com/NomadSnowLeo/status/2040953935893258530?s=20" target="_blank">https://x.com/NomadSnowLeo/status/2040953935893258530?s=20</a></div>
+        </article>
+        <article class="card">
+          <div class="num">2-2</div>
+          <div class="title">안드레 카파시 LLM 위키 메모</div>
+          <div class="row"><span class="label">한줄 핵심</span>AI가 읽은 지식을 위키처럼 누적·연결·갱신하게 하자는 관점.</div>
+          <div class="row"><span class="label">왜 중요한가</span>단발성 요약이 아니라 지식 축적 구조 자체를 바꾸는 아이디어라서, 메모리·에이전트 운영·개인 지식베이스 설계에 직접 연결됨.</div>
+          <div class="row"><span class="label">원문</span>없음</div>
+          <details>
+            <summary>메모 전문 보기</summary>
+            <blockquote>안드레 카파시가 GitHub에 파일 하나를 올렸다.
+
+코드도 없다. 앱도 없다. 그냥 마크다운 문서 하나만 있는데. 이름은 llm-wiki.md. 올린 지 10시간 만에 별 1,757개, 포크 318개를 받았다.
+
+이 뜻은 전 세계 개발자들이 그 파일 하나 보고 "바로 이거야"를 외쳤다는 뜻이다.
+
+그동안 우리가 AI를 쓰는 방식이 사실 꽤 비효율적이었다는 것을 아는가?
+
+지금 대부분의 사람들은 AI에게 파일을 던져주고 "이거 요약해줘", "이거 분석해줘"를 반복한다. 질문할 때마다 AI는 그 문서를 처음 읽는다. 어제 읽었던 논문, 지난달에 저장해둔 기사, 3년 전에 메모해둔 아이디어를 말이다.
+
+AI는 그걸 기억하지 못한다. 매번 새로 읽고, 매번 새로 연결하고, 매번 새로 이해한다. 쌓이는 게 없다.
+
+이걸 RAG 라고 부른다. 기술적으로는 아무 문제없다. 근데 생각해보면 이상하다. 당신이 매일 같은 책을 처음 읽는 사람한테 질문을 던지는 거랑 같다. 그 사람은 절대 전문가가 될 수 없다. 어제 읽은 걸 오늘 잊으니까.
+
+카파시가 제안한 건 다르다. AI가 지식을 읽을 때마다 그냥 답을 뱉고 끝내는 게 아니라, 그걸 위키에 쌓아두는 것이다. 연결하고, 모순을 찾아 표시하고, 업데이트하고, 계속 더 풍부하게 만들어간다. 새 자료가 들어올수록 위키는 더 똑똑해진다. 쌓인다. 마치 이자의 복리처럼.
+
+구조는 단순하다. 세 겹이다.
+
+첫 번째 겹은 원본 자료들. 논문, 기사, 메모. AI는 이걸 읽기만 하고 절대 건드리지 않는다.
+
+두 번째 겹은 위키. AI가 직접 쓰고 유지하는 마크다운 파일들. 요약 페이지, 개념 페이지, 연결 페이지. 당신이 읽고, AI가 쓴다.
+
+세 번째 겹은 스키마. AI한테 "이 위키를 어떻게 관리해"라고 알려주는 설정 파일. 카파시는 이걸 AGENTS.md나 CLAUDE.md에 넣어두라고 한다.
+
+카파시 본인은 왼쪽에 AI 에이전트, 오른쪽에 옵시디언을 열어두고 쓴다고 했다. AI가 위키를 수정하면 옵시디언에서 실시간으로 업데이트되는 걸 본다고. 그의 표현이 정확하다. "옵시디언은 IDE, AI는 프로그래머, 위키는 코드베이스다"
+
+예를 들어, 책을 읽는 방식도 달라진다. 소설 한 권 읽으면서 챕터마다 AI한테 넣으면, 끝날 때쯤 등장인물 관계도, 복선 추적 페이지, 주제 연결 지도가 완성되어 있다. 톨킨 게이트웨이처럼 수천 명이 수년에 걸쳐 만든 팬 위키를 혼자, AI와 함께, 책 한 권 읽는 시간에 만들 수 있다.
+
+근데 이 파일이 왜 이렇게 빠르게 퍼졌냐. 기술적으로 새로운 게 있어서가 아니다.
+
+카파시가 이 파일을 "아이디어 파일"이라고 부른 게 핵심이다. 코드가 없다. 우리가 직접 설치할 게 없다. "이 아이디어를 당신 에이전트에게 그대로 복붙하면, 에이전트가 당신 상황에 맞춰 직접 구현해준다"는 것이다.
+
+시대가 바뀌었다. 더 이상 앱을 공유하는 게 아니라 아이디어를 공유하는 방향으로 흐르는 것 같다. 받은 사람이 실행하는 게 아니라, 받은 사람의 에이전트가 실행한다.
+
+이게 왜 충격인지 생각해보면 된다. 오픈소스 소프트웨어는 코드를 나눈다. 하지만 코드는 여전히 직접 설치하고, 설정하고, 유지해야 한다.
+
+아이디어 파일은 다르다. 에이전트가 당신 환경, 당신 워크플로우, 당신 취향에 맞게 알아서 구현한다고 보면 될 것이다.
+
+우리는 오래전부터 "정보가 너무 많아서 문제"라고 했다. 근데 사실 정보가 많은 게 문제가 아니었다. 정보가 연결되지 않는 게 문제였다.
+
+LLM 위키는 그 연결을 AI한테 맡기는 거다. 당신이 할 건 좋은 자료 찾아오는 것, 그리고 좋은 질문 던지는 것. 나머지 연결, 요약, 교차참조, 모순 발견, 업데이트는 에이전트가 한다. 우리의 생각과 뇌는 더 중요한 일에 쓰인다.
+
+지식을 쌓는다는 건 원래 그런 거였다. 연결되고, 업데이트되고, 깊어지는 것. 우리는 그냥 그걸 할 인내심이 없었을 뿐이다. 에이전트는 인내심이 무한하다.</blockquote>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>3) 자료수집 인프라 / 레퍼런스</h2></div>
+      <div class="cards">
+        <article class="card">
+          <div class="num">3-1</div>
+          <div class="title">Agent Reach 리포지토리</div>
+          <div class="row"><span class="label">한줄 핵심</span>여러 사이트 검색/읽기용 도구를 한 번에 묶어주는 설치 허브 성격의 오픈소스 리포.</div>
+          <div class="row"><span class="label">왜 중요한가</span>앞으로 자료 수집과 링크 확인 흐름을 확장하는 기본 인프라 기준점 역할을 함.</div>
+          <div class="row"><span class="label">원문</span><a href="https://github.com/Panniantong/Agent-Reach" target="_blank">https://github.com/Panniantong/Agent-Reach</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>4) 도구 / 유틸리티 / 로컬 AI</h2></div>
+      <div class="cards">
+        <article class="card">
+          <div class="num">4-1</div>
+          <div class="title">ReClip 오픈소스 다운로더 소개</div>
+          <div class="row"><span class="label">한줄 핵심</span>여러 플랫폼 링크를 영상/오디오로 받기 쉽게 만든 yt-dlp 기반 오픈소스 도구.</div>
+          <div class="row"><span class="label">왜 중요한가</span>링크 기반 수집 자료를 저장하거나 가공할 때 실무적으로 바로 연결될 수 있는 유틸리티라서.</div>
+          <div class="row"><span class="label">원문</span><a href="https://x.com/lucas_flatwhite/status/2041175647394173281" target="_blank">https://x.com/lucas_flatwhite/status/2041175647394173281</a></div>
+        </article>
+        <article class="card">
+          <div class="num">4-2</div>
+          <div class="title">Google AI Gallery + Gemma 4 온디바이스 실행 소개</div>
+          <div class="row"><span class="label">한줄 핵심</span>스마트폰에서 Gemma 4를 오프라인으로 직접 돌릴 수 있다는 소개.</div>
+          <div class="row"><span class="label">왜 중요한가</span>개인정보, 비용, 지연 측면에서 로컬 AI 활용 가능성을 보여주는 사례라서.</div>
+          <div class="row"><span class="label">원문</span><a href="https://x.com/lucas_flatwhite/status/2040705274085085552?s=20" target="_blank">https://x.com/lucas_flatwhite/status/2040705274085085552?s=20</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>5) 자동화 / 실무 생산성</h2></div>
+      <div class="cards">
+        <article class="card">
+          <div class="num">5-1</div>
+          <div class="title">앱스스크립트·매크로·파워쿼리 재활용 메모 + 참고 링크</div>
+          <div class="row"><span class="label">한줄 핵심</span>AI 토큰 비용을 아끼는 방향에서 전통 자동화 도구를 다시 적극 활용해야 한다는 문제의식.</div>
+          <div class="row"><span class="label">왜 중요한가</span>반복형 엑셀 작업은 대화형 AI보다 스크립트·매크로·쿼리 자동화가 더 안정적이고 경제적일 수 있어서.</div>
+          <div class="row"><span class="label">원문</span><a href="https://youtu.be/8LuyC3bFtLw?si=oajmq-pCDV6wiIJI" target="_blank">유튜브</a> · <a href="https://cho-ai-lab.blogspot.com/2026/04/10.html" target="_blank">블로그</a></div>
+        </article>
+        <article class="card">
+          <div class="num">5-2</div>
+          <div class="title">유튜브 링크 적재 (제목 확인 대기)</div>
+          <div class="row"><span class="label">한줄 핵심</span>확인이 덜 된 유튜브 링크도 누락되지 않도록 선등록.</div>
+          <div class="row"><span class="label">왜 중요한가</span>나중에 제목/주제를 보강하더라도 우선 자료 누락을 막는 게 더 중요하기 때문.</div>
+          <div class="row"><span class="label">원문</span><a href="https://youtu.be/GX0qaErlZuY?si=d-bjiL8A2F0Vzu0W" target="_blank">https://youtu.be/GX0qaErlZuY?si=d-bjiL8A2F0Vzu0W</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>6) 기타 참고</h2></div>
+      <div class="cards">
+        <article class="card">
+          <div class="num">6-1</div>
+          <div class="title">정책/도시공간 자료</div>
+          <div class="row"><span class="label">한줄 핵심</span>서울도시공간포털 자료실의 3월 5일자 자료 참고 안내.</div>
+          <div class="row"><span class="label">왜 중요한가</span>도시공간·정책 쪽 자료 탐색의 출발점이 될 수 있어서.</div>
+          <div class="row"><span class="label">원문</span><a href="https://x.com/moomini00/status/2041043327378924014?s=20" target="_blank">https://x.com/moomini00/status/2041043327378924014?s=20</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="footer">모바일에서 보기 쉽게 카드형으로 정리된 브리핑 페이지</div>
+  </div>
+</body>
+</html>
